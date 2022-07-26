@@ -14,5 +14,5 @@ echo "2.1: $STATUS21"
 getfacl /opt/house 2>/dev/null | grep "user:tom:rwx" >/dev/null && getfacl /opt/house 2>/dev/null | grep "user:jerry:rwx" >/dev/null && getfacl /opt/house/room 2>/dev/null | grep "user:tom:rwx" >/dev/null && getfacl /opt/house/room 2>/dev/null | grep "user:jerry:rwx" >/dev/null && getfacl /opt/house/kitchen 2>/dev/null | grep "user:tom:rwx" >/dev/null && getfacl /opt/house/kitchen 2>/dev/null | grep "user:jerry:r-x" >/dev/null && getfacl /opt/house/kitchen/cheese 2>/dev/null | grep "user:jerry:r--" >/dev/null && getfacl /opt/house/kitchen/cheese 2>/dev/null | grep "user:tom:-w-" >/dev/null && STATUS22=Success
 echo "2.2: $STATUS22"
 
-test ! -f /opt/test && STATUS23=Success
+test ! -f /opt/file && STATUS23=Success
 echo "2.3: $STATUS23"
